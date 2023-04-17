@@ -1,5 +1,11 @@
+import BlogPost from "../BlogPost";
+import Comment from "../Comment";
+
 function App() {
-  return null;
+  return (<>
+  <BlogPost />
+  <Comment />
+  </>)
 }
 
 export default App;
