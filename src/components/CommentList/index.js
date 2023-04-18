@@ -1,5 +1,7 @@
-// Take in comments as an array of objects
-// import
+import Comment from "../Comment"
+
+// Take in comments as an array of objects from comment Form.
+// import Comment from ../Comment
 /*
 {
   id : string
@@ -12,7 +14,7 @@
 function CommentList(comments) {
   return(
     <div>
-
+      <Comment id= {comments.id} author = {comments.author} content = {comments.content}/>
     </div>
 
   );
