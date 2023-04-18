@@ -1,10 +1,11 @@
 import BlogPost from "../BlogPost";
-import Comment from "../Comment";
 import CommentList from "../CommentList";
+import CommentForm from "../CommentForm";
 function App() {
   return (<>
   <BlogPost />
   <CommentList />
+  <CommentForm></CommentForm>
   </>)
 }
 
