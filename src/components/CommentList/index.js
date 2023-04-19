@@ -11,10 +11,11 @@ import Comment from "../Comment"
 
 */
 
-function CommentList(comments) {
+function CommentList({comments}) {
+  console.log(comments)
   return(
     <div>
-      <Comment id= {comments.id} author = {comments.author} content = {comments.content}/>
+      <Comment id= {comments.id} author = {comments.author} comment = {comments.comment}/>
     </div>
 
   );

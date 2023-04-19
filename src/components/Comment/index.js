@@ -3,8 +3,7 @@
 
 
 // Remove hard coding of author and content when input works!
-function firstInitials () {
-  let author = "Sam Williamson"
+function firstInitials ({author}) {
   let words = author.split(" ");
 let initials = "";
 
@@ -15,17 +14,19 @@ for (let i = 0; i < words.length; i++) {
 return initials;
 } 
 
-function Comment() {
-  let author = "Sam Williamson"
-let content = "Hello There"
+function Comment({author, comment}) {
     const initials = firstInitials(author);
   return (<div>
     <div>
       <p>{initials}</p>
     </div>
     <h3>{author}</h3>
-    <p>{content}</p>
+    <p>{comment}</p>
   </div>)
 }
 
 export default Comment;
+
+
+
+// Maybe start with an initial comment and then add more with input?

@@ -4,7 +4,7 @@ import CommentForm from "../CommentForm";
 import {useState} from "react"
 import {blog} from "../../data/blogs"
 function App() {
-  const [comments, setComments] = useState([])
+  const [comments, setComments] = useState({author: "Sam Williamson", content: "Wow this is so cool", id: "1"})
   function handleSubmit(author, content){
     // create an object for the comment
     // add it to the array of comments
@@ -14,8 +14,8 @@ function App() {
       comment: content,
     }
     setComments([...comments, newComment])
-    console.log(comments)
   }
+  console.log(comments)
   return (<>
   <BlogPost blog = {blog}/>
   <CommentList comments = {comments}/>
