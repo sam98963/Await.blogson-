@@ -3,16 +3,21 @@
 
 
 // Remove hard coding of author and content when input works!
-function firstInitials ({author}) {
-  let words = author.split(" ");
-let initials = "";
+function firstInitials (name) {
+// Split the name by space to get individual names
+console.log(name)
+const names = name.split(" ");
 
-for (let i = 0; i < words.length; i++) {
-  let initial = words[i].charAt(0).toUpperCase();
-  initials += initial;
-}
-return initials;
+// Extract the first letter of each name
+const initials = names.map((name) => name[0]);
+
+// Join the initials to create a string
+return initials.join("");
 } 
+
+
+
+
 
 function Comment({author, comment}) {
     const initials = firstInitials(author);
@@ -26,6 +31,18 @@ function Comment({author, comment}) {
 }
 
 export default Comment;
+
+
+// function getInitials(name) {
+//   // Split the name by space to get individual names
+//   const names = name.split(" ");
+
+//   // Extract the first letter of each name
+//   const initials = names.map((name) => name[0]);
+
+//   // Join the initials to create a string
+//   return initials.join("");
+// }
 
 
 

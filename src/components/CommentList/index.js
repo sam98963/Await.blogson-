@@ -12,10 +12,14 @@ import Comment from "../Comment"
 */
 
 function CommentList({comments}) {
-  console.log(comments)
   return(
     <div>
-      <Comment id= {comments.id} author = {comments.author} comment = {comments.comment}/>
+    {console.log(comments)}
+    {comments.map((comment) =>(
+      <Comment id= {comment.id} author = {comment.author} comment = {comment.comment}/>
+
+    ))
+    }
     </div>
 
   );
