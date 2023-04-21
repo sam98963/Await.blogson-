@@ -1,0 +1,46 @@
+
+/* NavBar Styling */
+.nav-bar-list li{
+  list-style: none;
+  display: inline-block;
+  padding-right: 55px;
+}
+
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 86px;
+  border-bottom: #ddd dotted 1px;
+}
+
+.nav-bar-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+nav h1 {
+  padding-left: 55px;
+}
+
+/* Blog Section Styling */
+
+.blog-section-title {
+  width: 100vw;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+  
+}
+
+.blog-section-title h1{
+  font-size: 40px;
+  margin-bottom: 30px;
+  border-bottom: #ddd dotted 1px;
+  padding: 0 10px;
+}
