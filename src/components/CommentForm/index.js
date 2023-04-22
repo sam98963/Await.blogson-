@@ -4,6 +4,7 @@
 // Make a default name for Author "Anon Author"
 // Do not allow submit if comment is empty.
 import {useState} from "react"
+import "./CommentForm.css"
 
 
 
@@ -29,10 +30,10 @@ function CommentForm({handleSubmit}) {
     setContent("")
   }
 
-  return (<div>
+  return (<div className="comment-form">
       <label>Author:<input type="text" onChange={(e)=>handleAuthor(e)}></input></label>
       <label>Comment:<input lable="Comment:" type="text"  onChange={(e)=>handleContent(e)}></input></label>
-      <button type="submit" onClick={()=>checkHandleSubmit(author, comment)}></button>
+      <button type="submit" onClick={()=>checkHandleSubmit(author, comment)}>Submit</button>
     
   </div>);
 }

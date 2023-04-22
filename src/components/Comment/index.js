@@ -1,3 +1,5 @@
+import "./Comment.css"
+
 // Take in props of author and content to display the comment
 // write a function to take in author and return capitalised initials
 
@@ -21,12 +23,14 @@ return initials.join("");
 
 function Comment({author, comment}) {
     const initials = firstInitials(author);
-  return (<div>
-    <div>
+  return (<div className="comment-div">
+    <div className="initials-circle">
       <p>{initials}</p>
     </div>
+    <div className="author-comment">
     <h3>{author}</h3>
     <p>{comment}</p>
+    </div>
   </div>)
 }
 

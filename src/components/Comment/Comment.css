@@ -1,0 +1,46 @@
+
+/* Initials circle styling */
+.initials-circle{
+  width: 80px;
+  height: 80px;
+  background-color: #999;
+  color: #eee;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  align-self: center;
+  margin-left: 20px;
+}
+
+.comment-div{
+  margin: auto;
+  height: 120px;
+  width: 86vw;
+  border: 1px #ccc dotted;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.author-comment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 35px;
+}
+
+.author-comment h3 {
+margin-top: 30px;
+font-size: 26px;
+border-bottom: #666 1px dotted;
+}
+.author-comment p {
+margin-top: 0px;
+margin-bottom: 30px;
+}
