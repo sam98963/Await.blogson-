@@ -4,4 +4,30 @@
   border: 2px #ccc solid;
   margin: auto;
   margin-top: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+#name-box{
+  width: 100%;
+}
+.comment-box{
+  width: 100%;
+  margin: 20px 0 0 20px;
+  text-align: left;
+}
+
+button {
+  margin: 20px 0 0 20px;
+  width: 70px;
+}
+
+label{
+  width: 100%;
+}
+
+#comment-input input{
+  width: 65%;
+  height: 300px;
 }

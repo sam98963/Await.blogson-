@@ -28,14 +28,14 @@ function CommentForm({handleSubmit}) {
       handleSubmit(author, comment)
     }
     setContent("")
+
   }
 
   return (<div className="comment-form">
-      <label>Author:<input type="text" onChange={(e)=>handleAuthor(e)}></input></label>
-      <label>Comment:<input lable="Comment:" type="text"  onChange={(e)=>handleContent(e)}></input></label>
+      <div class="comment-box"><label>Name:<input type="text" onChange={(e)=>handleAuthor(e)}></input></label></div>
+      <div class="comment-box" id="comment-input"><label>Add your comment here:<input value={comment} lable="Comment:" type="text"  onChange={(e)=>handleContent(e)}></input></label></div>
       <button type="submit" onClick={()=>checkHandleSubmit(author, comment)}>Submit</button>
-    
-  </div>);
+    </div>);
 }
 
 export default CommentForm;

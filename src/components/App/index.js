@@ -15,6 +15,7 @@ function App() {
       author: author,
       comment: comment,
     }
+
     setComments([...comments, newComment])
   }
   return (<>
