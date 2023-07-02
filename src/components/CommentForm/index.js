@@ -3,39 +3,53 @@
 // Handle functions for each useState✅
 // Make a default name for Author "Anon Author"
 // Do not allow submit if comment is empty.
-import {useState} from "react"
-import "./CommentForm.css"
+import { useState } from "react";
+import "./CommentForm.css";
 
+function CommentForm({ handleSubmit }) {
+  const [author, setAuthor] = useState("Anon Author");
+  const [comment, setContent] = useState("");
 
-
-
-function CommentForm({handleSubmit}) {
-  const [author,setAuthor] = useState("Anon Author")
-  const [comment,setContent] = useState("")
-  
   function handleAuthor(e) {
-    setAuthor(e.target.value)
+    setAuthor(e.target.value);
   }
 
   function handleContent(e) {
-    setContent(e.target.value)
+    setContent(e.target.value);
   }
 
-  // On click call another function (to be written) => check if content is empty if it isn't, call submit function, and reset content.
-
-  function checkHandleSubmit (author, comment) {
-    if(comment !== ""){
-      handleSubmit(author, comment)
+  function checkHandleSubmit(author, comment) {
+    if (comment !== "") {
+      handleSubmit(author, comment);
     }
-    setContent("")
-
+    setContent("");
   }
 
-  return (<div className="comment-form">
-      <div class="comment-box"><label>Name:<input type="text" onChange={(e)=>handleAuthor(e)}></input></label></div>
-      <div class="comment-box" id="comment-input"><label>Add your comment here:<input value={comment} lable="Comment:" type="text"  onChange={(e)=>handleContent(e)}></input></label></div>
-      <button type="submit" onClick={()=>checkHandleSubmit(author, comment)}>Submit</button>
-    </div>);
+  return (
+    <div className="comment-form">
+      <div className="comment-box">
+        <label htmlFor="name-input">Name:</label>
+        <input
+          id="name-input"
+          type="text"
+          value={author}
+          onChange={handleAuthor}
+        />
+      </div>
+      <div className="comment-box" id="comment-input">
+        <label htmlFor="comment-textarea">Add your comment here:</label>
+        <textarea
+          id="comment-textarea"
+          value={comment}
+          onChange={handleContent}
+          rows={10}
+        />
+      </div>
+      <button type="submit" onClick={() => checkHandleSubmit(author, comment)}>
+        Submit
+      </button>
+    </div>
+  );
 }
 
 export default CommentForm;
